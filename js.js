@@ -28,7 +28,7 @@ function upload() {
             'Content-Type': 'image/jpeg'
         } 
     };
-    axios.put('https://bcc00j9n88.execute-api.us-east-1.amazonaws.com/p/photolx/' + ID + '.jpg',
+    axios.put('' + ID + '.jpg',
         file,
         config
     ).then(response => {
@@ -40,13 +40,13 @@ function upload() {
 }
 function search(msg) {
     axios({
-        url: "https://wjx177n8e4.execute-api.us-east-1.amazonaws.com/prod/search",
+        url: "",
         method: 'post',
         data: {
             "message": msg
         },
         headers: {
-            "X-Api-Key": "ULWGhZU9di3ZNELXYJXdBwJY22E5xPS5z5ghwKCh"
+            "X-Api-Key": ""
         }
     }).then(response => {
         console.log(response.data.body);
@@ -65,7 +65,7 @@ function search(msg) {
 function addimage(name) {
     var img = new Image();
     img.setAttribute("class", "child");
-    img.setAttribute("src","https://s3-us-west-2.amazonaws.com/photolx/"+name);
+    img.setAttribute("src",""+name);
     img.setAttribute("onclick", "onClick(this)");
     img.setAttribute("height", "80%")
     var chatArea = $(".chatBody");
