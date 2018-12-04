@@ -40,7 +40,7 @@ function upload() {
 }
 function search(msg) {
     axios({
-        url: "https://mwu8afyoej.execute-api.us-east-1.amazonaws.com/pro/chatbot",
+        url: "https://wjx177n8e4.execute-api.us-east-1.amazonaws.com/prod/search",
         method: 'post',
         data: {
             "message": msg
@@ -67,6 +67,7 @@ function addimage(name) {
     img.setAttribute("class", "child");
     img.setAttribute("src","https://s3-us-west-2.amazonaws.com/photolx/"+name);
     img.setAttribute("onclick", "onClick(this)");
+    img.setAttribute("height", "80%")
     var chatArea = $(".chatBody");
     chatArea.append(img);
 }

@@ -9,7 +9,7 @@
 .child {
     box-sizing: border-box;
     height: 320px;
-    width: 320px;
+    width: 33%;
     padding: 10px;  
     cursor: pointer;
 }
@@ -104,8 +104,8 @@ input::placeholder{
 }
 
 .larger {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
 }
 
 .infoc {
@@ -125,4 +125,14 @@ input::placeholder{
 }
 .uuu {
     margin: auto;
+}
+
+textarea,
+button,
+input {
+    outline: none
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
 }
