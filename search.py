@@ -13,7 +13,7 @@ def lambda_handler(event, context):
     response1 = client.post_text(
         botName='Search',
         botAlias='$LATEST',
-        userId='Ximing',
+        userId='',
         inputText= q
     )
     slots = response1['slots']
